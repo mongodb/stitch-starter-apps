@@ -1,0 +1,45 @@
+# ANDROID-SPECIFIC
+   # Built application files
+   android_mobile/*/build/
+
+   # Crashlytics configuations
+   android_mobile/com_crashlytics_export_strings.xml
+
+   # Local configuration file (sdk path, etc)
+   android_mobile/local.properties
+
+   # Gradle generated files
+   android_mobile/.gradle/
+
+   # Signing files
+   android_mobile/.signing/
+
+   # User-specific configurations
+   android_mobile/.idea/libraries/
+   android_mobile/.idea/workspace.xml
+   android_mobile/.idea/tasks.xml
+   android_mobile/.idea/.name
+   android_mobile/.idea/compiler.xml
+   android_mobile/.idea/copyright/profiles_settings.xml
+   android_mobile/.idea/encodings.xml
+   android_mobile/.idea/misc.xml
+   android_mobile/.idea/modules.xml
+   android_mobile/.idea/scopes/scope_settings.xml
+   android_mobile/.idea/vcs.xml
+   android_mobile/*.iml
+
+   # OS-specific files
+   android_mobile/.DS_Store
+   android_mobile/.DS_Store?
+   android_mobile/._*
+   android_mobile/.Spotlight-V100
+   android_mobile/.Trashes
+   android_mobile/ehthumbs.db
+   android_mobile/Thumbs.db
+
+   #MongoDB Mobile files
+   android_mobile/app/src/main/jniLibs/
+
+#IOS-SPECIFIC
+
+#REACT-NATIVE-SPECIFIC

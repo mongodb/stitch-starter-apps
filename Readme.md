@@ -1,4 +1,5 @@
 ![alt text][logo]
+
 # MongoDb Android Starter Apps
 Starter projects for working with MongoDB Mobile &amp;
 [Stitch](https://docs.mongodb.com/stitch/) on mobile devices.
