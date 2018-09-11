@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Stitch Mobile Starter App</string>
+    <string name="add_item_action_label">Add</string>
+    <string name="clear_checked_action_label">Clear Checked</string>
+    <string name="clear_all_action_label">Clear All</string>
+    <string name="edit_item_hint">Edit Item</string>
+    <string name="friend_list_stitch_client_app_id">starterappdata-tqlwq</string>
+</resources>

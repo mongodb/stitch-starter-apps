@@ -18,3 +18,4 @@ For a list of platforms supported by MongoDB Mobile, see the
 Check out the Readme file in the subfolder for the language/platform you 
 want to use.
 
+[logo]: https://pbs.twimg.com/media/DC3eZkzXkAAGPhI.jpg

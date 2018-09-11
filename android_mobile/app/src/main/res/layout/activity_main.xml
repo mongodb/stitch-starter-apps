@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/logInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        >
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="You are not logged in." />
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="Log Out"
+            android:textColor="@color/btnDelete"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/logInfo"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/emailLabel"
+            android:text="Email:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            app:layout_constraintTop_toBottomOf="parent"/>
+
+        <EditText
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="starterapp@mongodb.com"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/emailLabel"
+            app:layout_constraintLeft_toRightOf="@id/emailLabel" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ll1"
+        tools:layout_editor_absoluteX="0dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <EditText
+            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="p@ssw0rd"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/passwordLabel"
+            app:layout_constraintLeft_toRightOf="@id/passwordLabel" />
+
+
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/ll2"
+    android:visibility="visible">
+
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Email/Password"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"  />
+
+    <Button
+        android:id="@+id/btnAnon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Continue Anonymously"
+        android:textSize="12dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"  />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/loggedInView"
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logInfo">
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="328dp"
+            android:divider="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:padding="5dip"
+            android:showDividers="middle"
+            android:stretchColumns="*"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/getRemoteData"
+                    android:text="Get Remote Data" />
+
+                <Button
+                    android:id="@+id/btnCopyLocal"
+                    android:text="Copy to Local"
+                    android:textColor="@color/btnDefault"/>
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:gravity="left"
+                    android:text="Atlas data (remote)"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Local data"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/remoteData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="---"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/localData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="---"
+                    android:textSize="12dp"
+
+                    />
+            </TableRow>
+
+        </TableLayout>
+        <Button
+            android:id="@+id/btnCallFunc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/table"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Call a Stitch Function"
+            android:textColor="@color/colorPrimary"
+            />
+        <TextView
+            android:id="@+id/tvFuncResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingHorizontal="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnCallFunc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
